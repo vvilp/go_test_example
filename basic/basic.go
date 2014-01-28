@@ -193,6 +193,10 @@ func test_max_integer() {
 	fmt.Println(a)
 }
 
+func test_string_para(str *string) {
+	*str += "qwe"
+}
+
 func main() {
 	//test_switch()
 	//test_if()
@@ -207,5 +211,10 @@ func main() {
 	//test_for()
 	 //test_defer()
 	// test_func()
-	test_max_integer()
+	// test_max_integer()
+
+	str := "123"
+	test_string_para(&str)
+	fmt.Println(str)
+	
 }
